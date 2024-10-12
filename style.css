@@ -1,0 +1,179 @@
+body {
+    font-family: 'TT Lakes', sans-serif;
+    background-color: #F8F8F8;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #D9FFF5;
+    background-color: #FFF;
+}
+
+.menu__item {
+    margin: 17px 0;
+}
+
+.menu__item:first-child {
+    margin-left: 16px;
+}
+
+.menu__item:last-child {
+    margin-right: 16px;
+}
+
+.menu__item:nth-child(2) {
+    flex: 1;
+}
+
+.menu__item_tablet_visible {
+    display: none;
+}
+
+.menu__item_desktop_visible {
+    display: none;
+}
+
+.section__title {
+    display: flex;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    padding: 24px 0;
+}
+
+.section__title::before {
+    content: '';
+    display: inline;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    margin-right: 12px;
+    border-radius: 0 10px 10px 0;
+}
+
+.tabs {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.tabs__item {
+    text-wrap: nowrap;
+    margin: 0 16px 16px 16px;
+    padding: 6px 16px;
+    color: #7E7E82;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+}
+
+.tabs__item_active {
+    border: 2px solid #B8FFEC;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.content__text {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.content__text_tablet_visible {
+    display: none;
+}
+
+.content__readmore {
+    display: flex;
+    align-items: baseline;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+.readmore__icon {
+    margin-left: 16px;
+}
+
+.readmore__text {
+    margin-left: 24px;
+}
+
+.content__img {
+    margin: 16px 0;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .menu__item_tablet_visible {
+        display: block;
+    }
+
+    .content {
+       display: flex;
+    }
+
+    .content__left {
+        flex: 1;
+    }
+
+    .content__right {
+        flex: 1;
+        margin-right: 24px;
+    }
+
+    .content__text {
+        line-height: 18px;
+    }
+
+    .content__text_tablet_visible {
+        display: block;
+    }
+
+    .content__text_desktop_visible {
+        display: none;
+    }
+
+    .content__img {
+        border-radius: 6px;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .menu {
+        justify-content: flex-end;
+        background-color: transparent;
+        border: 0px;
+    }
+
+    .menu__item_desktop_hidden {
+        display: none;
+    }
+
+    .menu__item_desktop_visible {
+        display: block;
+    }
+
+    .section {
+        margin-top: -77px;
+    }
+    
+    .tabs {
+        overflow: visible;
+        flex-wrap: wrap;
+    }
+
+    .content__text_desktop_visible {
+        display: inline;
+    }
+}
